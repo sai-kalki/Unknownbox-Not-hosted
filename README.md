@@ -1,0 +1,2 @@
+# Unknownbox-Not-hosted
+My first project after  learning Python Flask Mini-Framework. It is a secret message web app where user can create a account and generate a link. This link can be shared with anyone by the user. People with link can message the user through the message portal of the link. User can view the messages but message will be anonymous. It is a little bit fun website to guess which friend messaged you.
