@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>{% block title %} {% endblock %}</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{url_for('static',filename='css/main.css')}}" type="text/css" rel="stylesheet"/>
+  <link href="{{url_for('static',filename='css/style.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body style="background-color:darkorchid">
+
+ <header>
+	<div class="row valign-wrapper">
+    <div class="col l6 s12 m8 offset-m2 offset-l3">
+	 <nav>
+      <div class="nav-wrapper" >
+      <nav class="nav-extended" style="background-color:white; border:1px solid white;">
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo" style="color:darkorchid">UnknownBox</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color:darkorchid">menu</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="{{url_for('home')}}" style="color:darkorchid">Home</a></li>
+				<li><a href="{{url_for('messages')}}" style="color:darkorchid">Messages</a></li>
+				<li><a href="{{url_for('logout')}}" style="color:darkorchid">logout</a></li>
+				
+			</ul>
+		</div>
+	  </nav>
+
+		<ul class="sidenav" id="mobile-demo">
+			<h2 style="color:darkorchid">&nbsp &nbsp Menu</h2>
+			
+			<li><a href="{{url_for('home')}}"><i class="material-icons">home</i>&nbsp Home</a></li>
+			<li><a href="{{url_for('messages')}}"><i class="material-icons">message</i>&nbsp Messages</a></li>
+			<li><a href="{{url_for('logout')}}"><i class="material-icons">arrow_back</i>&nbsp logout</a></li>
+			
+		</ul>
+     
+	</div>
+	</div>
+	
+ </header>
+
+ <main>
+
+	<br>
+	
+	{%  block content %}
+	
+	{% endblock %}
+	
+	
+</main>
+  
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{url_for('static',filename='/js/materialize.js')}}"></script>
+  <script src="{{url_for('static',filename='/js/init.js')}}"></script>
+  <script src="{{url_for('static',filename='/js/myjavascript.js')}}"></script>
+
+  </body>
+</html>

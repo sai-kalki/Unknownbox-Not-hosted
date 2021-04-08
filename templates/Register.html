@@ -1,0 +1,42 @@
+{% extends "base_one.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+	<div class="row valign-wrapper" style="height:50%">
+    <div class="col l4 s10 m6 offset-s1 offset-m3 offset-l4 center-align">
+      <div class="card white darken-6 z-depth-5" >
+        <div class="card-content Black-text">
+          <span class="card-title">Register Your Account</span>
+          <p></p>
+        </div>
+        <div class="card-action">
+		  <p style="color:red">{{ flash }}</p>
+		  <form action="" method="post">
+          <div class="input-field">
+          <input placeholder="This will be shown to friends" id="first_name" name="username" type="text" class="validate">
+          <label for="first_name">Username</label>
+          </div>
+		  
+		  <div class="input-field">
+          <input id="password" type="password" name="password" class="validate">
+          <label for="password">Password</label>
+          </div>
+		  <br>
+		  <p>
+			<label>
+			<input type="checkbox" class="filled-in" name="checkbox" checked="checked"/>
+			<span>Accept our <a href="{{url_for('terms')}}" style="text-transform:None">Terms and Conditions?.</a></span>
+			</label>
+			</p>
+			<a href="{{url_for('login')}}">&nbsp &nbsp&nbsp Already Logged in ?</a><br>
+		<br>
+		  <button class="btn waves-effect waves-light purple lighten-1" type="submit" name="action">Register</button>
+		  <br>
+		  
+		  <br>
+		  
+		  </form>
+		  
+		  
+		 
+{% endblock %}
+

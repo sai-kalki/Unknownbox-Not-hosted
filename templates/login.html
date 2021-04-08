@@ -1,0 +1,37 @@
+{% extends "base_one.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+	<div class="row valign-wrapper" style="height:50%">
+    <div class="col l4 s10 m6 offset-s1 offset-m3 offset-l4 center-align">
+      <div class="card white darken-6 z-depth-5" >
+        <div class="card-content Black-text">
+          <span class="card-title">Login into your Account</span>
+          <p></p>
+        </div>
+        <div class="card-action">
+		  <form action="" method="post">
+		  
+		  <p style="color:red">{{ Invalid_Credentials }}</p>
+		  
+          <div class="input-field">
+          <input placeholder="" id="first_name" name="username" type="text" class="validate">
+          <label for="first_name">Username</label>
+          </div>
+		  
+		  <div class="input-field">
+          <input id="password" type="password" name="password" class="validate">
+          <label for="password">Password</label>
+          </div>
+		  <br>
+		  <button class="btn waves-effect waves-light purple lighten-1" type="submit" name="action">Login</button>
+		  <br>
+		  <br>
+		  </form>
+		  
+		  <a href="{{url_for('register')}}">Didn't Register yet?</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

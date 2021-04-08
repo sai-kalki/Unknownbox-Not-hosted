@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Write a message to your friend</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{url_for('static',filename='css/main.css')}}" type="text/css" rel="stylesheet"/>
+  <link href="{{url_for('static',filename='css/style.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body style="background-color:darkorchid">
+
+ <header>
+	<div class="row valign-wrapper">
+    <div class="col l6 s12 m8 offset-m2 offset-l3">
+	 <nav>
+      <div class="nav-wrapper" >
+      <nav class="nav-extended" style="background-color:white; border:1px solid white;">
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo" style="color:darkorchid">UnknownBox</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color:darkorchid">menu</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="{{url_for('login')}}" style="color:darkorchid">Create your Own Secret Message Link</a></li>
+			</ul>
+		</div>
+	  </nav>
+
+		<ul class="sidenav" id="mobile-demo">
+			<h3 style="color:darkorchid">&nbsp &nbsp Menu</h3>
+			
+			<li><a href="{{url_for('login')}}">Create your Own Secret Message Link</a></li>
+			
+			
+		</ul>
+     
+	</div>
+	
+	</div>
+	
+ </header>
+ 
+  <main>
+	<br>
+	<div class="row valign-wrapper" style="height:50%">
+    <div class="col l6 s10 m8 offset-s1 offset-m2 offset-l3 center-align">
+      <div class="card white darken-6 z-depth-5" >
+        <div class="card-content Black-text">
+          <span class="card-title">Write a message to your friend...</span>
+          <p></p>
+        </div>
+        <div class="card-action">
+		  <form action="" method="post">
+		  
+          <div class="row">
+          <div class="input-field col s12">
+		  
+			<form >
+            <textarea id="textarea2" class="materialize-textarea" name="message" data-length="400"></textarea>
+            <label for="textarea2">Type your message here</label>
+			
+		    <br>
+		    <button class="btn waves-effect waves-light purple lighten-1" type="submit">Send</button>
+		 
+			
+			
+          </div>
+          </div>
+			
+		  
+		  </form>
+		  
+		
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</main>
+ 
+ 
+
+ 
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{url_for('static',filename='js/materialize.js')}}"></script>
+  <script src="{{url_for('static',filename='js/init.js')}}"></script>
+  <script src="{{url_for('static',filename='js/myjavascript.js')}}"></script>
+  </body>
+</html>

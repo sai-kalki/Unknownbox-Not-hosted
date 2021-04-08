@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.section{
+	margin-top:20px;
+}
+.section .createlink{
+	margin-top: 25px;
+	padding : 10px;
+	color: black;
+}
+.quizzes .collection-item{
+	color: darkorchid !important;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+  }
+footer textarea{
+	background-color: white;
+	border:none;
+	outline:none;
+	
+}
+.profileimg{
+	border-radius:50%;
+}
+.changeimg{
+	margin-left:250px;
+	margin-top:-160px;
+}
+
+.editprofile{
+	margin-left:10px;	
+	margin-top:5px;
+}
+ .changepassword{
+	margin-left:10px;	
+	margin-top:5px;
+}
+
+.notdotted{
+	border-bottom-style:solid !important;
+}
+
+
+
+
+
+

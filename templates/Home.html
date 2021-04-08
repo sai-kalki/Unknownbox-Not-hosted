@@ -1,0 +1,35 @@
+{% extends "base_two.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+	<div class="row valign-wrapper" >
+    <div class="col l6 s10 m8 offset-s1 offset-m2 offset-l3 center-align">
+      
+	
+    </div>
+  </div>
+	<div class="row valign-wrapper" >
+    <div class="col l6 s10 m8 offset-s1 offset-m2 offset-l3 center-align">
+      <div class="card white darken-6 z-depth-5" >
+        <div class="card-content Black-text">
+          <span class="card-title">Share this link to get messages from your Friends</span>
+        </div>
+        <div class="card-action" style="overflow:hidden;overflow-wrap: break-word">
+		  <p id="msglink1">Hey guys&#9996;  I am your buddy {{user}}&#128149 <br>Write me a anonymous message for me through the link given here:<br> <a id="msglink2" style="text-transform:None">http://unknownbox.herokuapp.com/writemsgs/{{idnum}}</a> <br>&#128293;I'll never know who sent the messages&#128293;<br>&#128156I'll try to guess "who" sent "which" message&#128156</p>
+		  <br>
+		  <br>
+		  <br>
+		
+				<a class="btn waves-effect waves-light purple lighten-1"  href="{{url_for('messages')}}">View Messages</a>
+				<br>
+				<br>
+				<button class="btn waves-effect waves-light purple lighten-1" onclick="CopyClipboard('#msglink2')">&nbsp&nbsp&nbsp&nbspCopy Link&nbsp&nbsp&nbsp&nbsp</button>
+				<br>
+				<br>
+				<button class="btn waves-effect waves-light purple lighten-1" onclick="CopyClipboard('#msglink1')">Copy Passage</button>
+
+		  
+			</div>
+		</div>
+    </div>
+	</div>
+{% endblock %}

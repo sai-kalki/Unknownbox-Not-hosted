@@ -1,0 +1,32 @@
+{% extends "base_two.html" %}
+{% block title %}Messages{% endblock %}
+{% block content %}
+	<div class="row valign-wrapper" >
+    <div class="col l6 s10 m8 offset-s1 offset-m2 offset-l3 left-align">
+      <div class="card white darken-6 z-depth-5" >
+        <div class="card-content Black-text">
+          <span class="card-title">Messages You've Got So far</span>
+        </div>
+        <div class="card-action">
+			
+        </div>
+      </div>
+	  
+	  {%for msg in msgs%}
+	   {%for time in times%}
+	  <div class="card white darken-6 z-depth-5" >
+		<br>
+        <div class="card-content Black-text center-align" style="overflow:hidden;overflow-wrap: break-word">
+          <span class="flow-text" >{{msg}}</span>
+		  <br><br>
+		   <span style="color:grey;font-size:10px">{{time}}</span>
+        </div>
+		
+      </div>
+	  <hr>
+	  {%endfor%}
+	  {%endfor%}
+	  
+    </div>
+  </div>
+{% endblock %}
